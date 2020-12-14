@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Splide CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -80,7 +82,22 @@
                         <button class="next-btn"></button>
                     </div>
                     <div class="img-block border">
-                        <img src="images/custom-build-img2.jpg" alt="Custom Build" class="img-fluid" />
+                        <div class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <img src="images/custom-build-img2.jpg" alt="Custom Build" class="img-fluid" />
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="images/custom-build-img2.jpg" alt="Custom Build" class="img-fluid" />
+                                    </li>
+                                    <li class="splide__slide">
+                                        <img src="images/custom-build-img2.jpg" alt="Custom Build" class="img-fluid" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -136,7 +153,26 @@
         </div>
     </section>
 
+    <!-- Modal -->
+    <div class="modal" id="video-modal">
+        <div class="modal-container">
+            <button id="close">&times;</button>
+            <div class="modal-body">
+                <img src="images/video-block-bg.jpg" alt="" class="img-fluid" />
+            </div>
+        </div>
+    </div>
 
 
 
+
+
+
+
+
+
+
+    <!-- Splide JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script src="js/app.js"></script>
 </body></html>
