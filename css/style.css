@@ -391,6 +391,132 @@ li {
     }
 }
 
+/* Our Service Section */
+.our-service-section {
+    background-image: url(../images/our-service-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 90px 0;
+    margin: 0;
+}
+
+.our-service-section .title-block {
+    text-align: center;
+    padding: 0 0 73px 0;
+    margin: 0;
+}
+
+.our-service-section .title-block h3 {
+    font-size: 20px;
+    font-family: var(--primary-font);
+    color: var(--off-white);
+    text-transform: uppercase;
+    line-height: 1.85;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+.our-service-section .title-block h2 {
+    font-size: 40px;
+    font-family: var(--title-font);
+    color: var(--accent-color);
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 0;
+    margin: 0;
+}
+
+.our-service-section .row {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.our-service-section .row .block {
+    position: relative;
+    text-align: center;
+    border: 2px solid var(--text-color);
+    padding: 62px 30px 43px;
+    margin: 0;
+}
+
+
+.our-service-section .row .block .icon-block {
+    width: 62px;
+    height: 62px;
+    background-color: #1f2e45;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: -9%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-service-section .row .block h3 {
+    font-size: 19px;
+    font-family: var(--title-font);
+    color: var(--accent-color);
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-weight: 500;
+    padding: 0 0 27px 0;
+    margin: 0;
+}
+
+.our-service-section .row .block p {
+    font-size: 17px;
+    font-family: var(--primary-font);
+    color: var(--off-white);
+    text-transform: uppercase;
+    line-height: 1.8;
+    font-weight: 300;
+    padding: 0 0 34px 0;
+    margin: 0;
+}
+
+.our-service-section .row .block a {
+    font-size: 20px;
+    font-family: var(--title-font);
+    color: var(--accent-color);
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
