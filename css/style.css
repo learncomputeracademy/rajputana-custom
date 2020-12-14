@@ -1,0 +1,334 @@
+/*
+Project: Rajputana Customs
+*/
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --accent-color: #F5931C;
+    --text-color: #fff;
+    --off-white: #fefefe;
+
+    --title-font: 'Oswald', sans-serif;
+    --primary-font: ;
+
+    --effect: all .3s ease-in-out;
+    --z: 999;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.btn {
+    font-size: 20px;
+    font-family: var(--title-font);
+    color: rgb(29, 32, 51);
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: var(--accent-color);
+    padding: 15px 62px;
+    margin: 0;
+}
+
+.border {
+    border: 5px solid var(--accent-color);
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    color: #000;
+    line-height: 1.3;
+    font-weight: 400;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+a,
+a:hover,
+a:visited {
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul,
+li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/*Banner Start*/
+.banner {
+    position: relative;
+    line-height: 0;
+}
+
+.banner header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding: 15px 0;
+    margin: 0;
+    z-index: var(--z);
+}
+
+.banner header .row {
+    display: grid;
+    grid-template-columns: 222px 1fr;
+}
+
+.banner header .rt-block {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: right;
+}
+
+.banner header .rt-block .contact-block ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.banner header .rt-block .contact-block ul li {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--accent-color);
+    padding: 0;
+    margin-left: 78px;
+}
+
+.banner header .rt-block .contact-block ul li .bx {
+    height: 34px;
+    width: 34px;
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 12px;
+    transition: var(--effect);
+}
+
+.banner header .rt-block .contact-block ul li a {
+    color: var(--text-color);
+    transition: var(--effect);
+}
+
+.banner header .rt-block .contact-block ul li:hover .bx {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.banner header .rt-block .contact-block ul li a:hover {
+    color: var(--accent-color);
+}
+
+.banner header .rt-block .nav-bar {
+    padding: 0;
+    margin: 0;
+}
+
+.banner header .rt-block .nav-bar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.banner header .rt-block .nav-bar ul li {
+    margin: 0 0 0 54px;
+}
+
+.banner header .rt-block .nav-bar ul li a {
+    font-family: var(--title-font);
+    font-size: 23px;
+    color: var(--accent-color);
+    line-height: 1.3;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 400;
+    padding: 0 0 10px 0;
+    margin: 0;
+    position: relative;
+}
+
+.banner header .rt-block .nav-bar ul li a.active {
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.banner header .rt-block .nav-bar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: var(--effect);
+}
+
+.banner header .rt-block .nav-bar ul li a:hover::after {
+    width: 100%;
+}
+
+.banner .desc {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .desc h1 {
+    font-family: var(--title-font);
+    font-size: 65px;
+    color: #fff;
+    line-height: 1.43;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.banner .desc h1 span {
+    display: block;
+}
+
+/*Custom Build Section*/
+.custom-build-section {
+    background-image: url(../images/custom-build-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 90px 0;
+    margin: 0;
+
+}
+
+.custom-build-section .custom-build {
+    padding: 0;
+    margin: 0;
+}
+
+.custom-build-section .custom-build .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-build-section .custom-build .row .img-block {
+    width: 49%;
+    line-height: 0;
+}
+
+.custom-build-section .custom-build .row .text-block {
+    width: 49%;
+    text-align: center;
+}
+
+.custom-build-section .custom-build .row .text-block h2 {
+    font-family: var(--title-font);
+    font-size: 49px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    line-height: 1.531;
+    letter-spacing: 1px;
+    padding: 0 0 26px 0;
+    margin: 0;
+}
+
+.custom-build-section .custom-build .row .text-block p {
+    font-family: var(--title-font);
+    font-size: 18px;
+    color: var(--off-white);
+    line-height: 1.531;
+    padding: 0 0 30px 0;
+    margin: 0;
+}
+
+.custom-build-section .custom-build .row:nth-child(2) .text-block {
+    width: 47%;
+    text-align: right;
+    padding: 83px 52px;
+}
+
+.custom-build-section .custom-build .row:nth-child(2) .text-block h4 {
+    font-size: 19px;
+    font-family: var(--primary-font);
+    color: var(--accent-color);
+    text-transform: uppercase;
+    line-height: 1.3;
+    text-align: right;
+    font-weight: 300;
+    padding: 0 0 22px 0;
+    margin: 0;
+}
+
+.custom-build-section .custom-build .row:nth-child(2) .text-block h2 {
+    font-size: 61px;
+    font-family: var(--title-font);
+    color: var(--text-color);
+    text-transform: uppercase;
+    line-height: 1.3;
+    text-align: right;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding: 0 0 22px 0;
+    margin: 0;
+}
+
+.custom-build-section .custom-build .row:nth-child(2) .text-block h2 span {
+    display: block;
+    color: var(--accent-color);
+}
+
+.custom-build-section .custom-build .row:nth-child(2) .img-block {
+    width: 51%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
