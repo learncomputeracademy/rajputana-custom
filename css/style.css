@@ -173,11 +173,8 @@ li {
     position: relative;
 }
 
-.banner header .rt-block .nav-bar ul li a.active {
-    border-bottom: 2px solid var(--accent-color);
-}
 
-.banner header .rt-block .nav-bar ul li a::after {
+.banner header .rt-block .nav-bar ul li a.active::after {
     content: '';
     position: absolute;
     left: 0;
@@ -186,9 +183,10 @@ li {
     height: 2px;
     background-color: var(--accent-color);
     transition: var(--effect);
+    transform: skewX(-35deg);
 }
 
-.banner header .rt-block .nav-bar ul li a:hover::after {
+.banner header .rt-block .nav-bar ul li a.active:hover::after {
     width: 100%;
 }
 
@@ -225,11 +223,9 @@ li {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-position: center;
     background-attachment: fixed;
     padding: 90px 0;
     margin: 0;
-
 }
 
 .custom-build-section .custom-build {
@@ -311,15 +307,89 @@ li {
     color: var(--accent-color);
 }
 
+.custom-build-section .custom-build .row:nth-child(2) .text-block .next-btn {
+    background-image: url(../images/left-arrow.png);
+    width: 184px;
+    height: 22px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 .custom-build-section .custom-build .row:nth-child(2) .img-block {
     width: 51%;
 }
 
+/*Video Section*/
+.video-section {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
 
+.left-block {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
 
+.video-section .left-block .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
 
+.video-section .left-block .container .img-block {
+    width: 40%;
+    line-height: 0;
+    position: relative;
+}
 
+.video-section .left-block .container .img-block .play-btn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 106px;
+    height: 106px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
 
+    animation: ripple 2s ease-in-out infinite;
+}
+
+.video-section .left-block .container .img-block .play-btn::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+    width: 0;
+    height: 0;
+    border-width: 19.5px 0 19.5px 29px;
+    border-color: transparent transparent transparent var(--accent-color);
+    border-style: solid;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 -5px rgba(0, 0, 0, .8);
+    }
+
+    50% {
+        box-shadow: 0 0 0 15px rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 -2px rgba(0, 0, 0, 0);
+    }
+}
 
 
 
