@@ -419,6 +419,30 @@ li {
     }
 }
 
+@animation zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@animation zoomOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
 /* Our Service Section */
 .our-service-section {
     background-image: url(../images/our-service-bg.jpg);
