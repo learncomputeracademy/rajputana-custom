@@ -49,7 +49,16 @@ window.addEventListener("DOMContentLoaded", () => {
         const close = document.querySelector("#close");
 
         playBtn.addEventListener("click", openModal);
-        modal.addEventListener("click", closeModal);
+        modal.addEventListener("click", closeModal, false);
+        document.addEventListener("keydown", (event) => {
+            if (event.keyCode === 27 && modal) {
+                const styles = {
+                    display: 'none',
+                }
+
+                Object.assign(modal.style, styles);
+            }
+        });
 
         function openModal() {
             const styles = {
@@ -57,7 +66,7 @@ window.addEventListener("DOMContentLoaded", () => {
             }
             Object.assign(modal.style, styles);
 
-            modalContainer.style.animation = "zoomIn .3s linear forwards 5s";
+            //modalContainer.style.animation = "zoomIn .3s linear forwards 5s";
 
         }
 
@@ -76,6 +85,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
             }
         }
+
     }
 
 
