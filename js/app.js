@@ -46,6 +46,7 @@ window.addEventListener("DOMContentLoaded", () => {
         const playBtn = document.querySelector(".play-btn");
         const modal = document.querySelector("#video-modal");
         const modalContainer = document.querySelector(".modal-container");
+        const iframe = document.querySelector("#rajputanaVideo");
         const close = document.querySelector("#close");
 
         playBtn.addEventListener("click", openModal);
@@ -61,30 +62,57 @@ window.addEventListener("DOMContentLoaded", () => {
         });
 
         function openModal() {
+            //Modal Display flex
             const styles = {
                 display: 'flex'
             }
             Object.assign(modal.style, styles);
 
-            //modalContainer.style.animation = "zoomIn .3s linear forwards 5s";
+            //modal.classList.add("zoomIn");
+
+            //Set iframe src
+            let url = iframe.getAttribute("src");
+
+            iframe.setAttribute("src", url);
+
 
         }
 
         function closeModal(e) {
 
-            //modalContainer.style.animation = "zoomOut .3s linear forwards 5s";
-
-            console.log(e);
-
             if (e.target == modal || e.target == close) {
+                //Modal display none
                 const styles = {
                     display: 'none',
                 }
-
                 Object.assign(modal.style, styles);
+
+                //Remove iframe src to null
+                let iframe = document.querySelector("#rajputanaVideo");
+                let url = iframe.getAttribute("src");
+
+                iframe.setAttribute("src", "");
 
             }
         }
+
+        //Video Stop
+        /* Get iframe src attribute value i.e. YouTube video url
+        and store it in a variable */
+        var url = document.querySelector("#rajputanaVideo").getAttribute("id");
+
+        /* Assign empty url value to the iframe src attribute when
+        modal hide, which stop the video playing */
+        $("#exampleModalCenter").on('hide.bs.modal', function () {
+            $("#modalVideo").attr('src', '');
+        });
+
+        /* Assign the initially stored url back to the iframe src
+        attribute when modal is displayed again */
+        $("#exampleModalCenter").on('show.bs.modal', function () {
+            $("#modalVideo").attr('src', url);
+        });
+
 
     }
 
