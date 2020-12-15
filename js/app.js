@@ -47,6 +47,9 @@ window.addEventListener("DOMContentLoaded", () => {
         const modal = document.querySelector("#video-modal");
         const modalContainer = document.querySelector(".modal-container");
         const iframe = document.querySelector("#rajputanaVideo");
+        const iframeSrc = iframe.src;
+        console.log(iframeSrc);
+        iframe.setAttribute("src", "");
         const close = document.querySelector("#close");
 
         playBtn.addEventListener("click", openModal);
@@ -67,13 +70,11 @@ window.addEventListener("DOMContentLoaded", () => {
                 display: 'flex'
             }
             Object.assign(modal.style, styles);
-
             //modal.classList.add("zoomIn");
 
             //Set iframe src
-            let url = iframe.getAttribute("src");
+            iframe.setAttribute("src", iframeSrc);
 
-            iframe.setAttribute("src", url);
 
 
         }
