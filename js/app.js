@@ -97,24 +97,6 @@ window.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        //Video Stop
-        /* Get iframe src attribute value i.e. YouTube video url
-        and store it in a variable */
-        var url = document.querySelector("#rajputanaVideo").getAttribute("id");
-
-        /* Assign empty url value to the iframe src attribute when
-        modal hide, which stop the video playing */
-        $("#exampleModalCenter").on('hide.bs.modal', function () {
-            $("#modalVideo").attr('src', '');
-        });
-
-        /* Assign the initially stored url back to the iframe src
-        attribute when modal is displayed again */
-        $("#exampleModalCenter").on('show.bs.modal', function () {
-            $("#modalVideo").attr('src', url);
-        });
-
-
     }
 
 
