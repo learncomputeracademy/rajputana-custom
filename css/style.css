@@ -546,20 +546,105 @@ li {
     margin: 0;
 }
 
+/**/
+.our-recent-works-section{
+    background-image: url('../images/our-recent-works-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 90px 0;
+    margin: 0; 
+}
+.our-recent-works-section .title-block{
+    padding: 0 0 54px 0;
+    margin: 0;
+}
+.our-recent-works-section .title-block h2{
+    font-family: var(--title-font);
+    font-size: 50px;
+    color: #fff;
+    line-height: 1.3;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
 
+.our-recent-works-section #btn_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.our-recent-works-section #btn_container .btn{
+    font-family: var();
+    font-size: 30px;
+    color: var(--text-color);
+    line-height: 1.3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    padding: 24px 77px;
+    margin: 0;
+    position: relative;
+    transition: var(--effect);
+    z-index: 2; 
+}
+.our-recent-works-section #btn_container .btn:focus{
+    outline: none;
+    border: none;
+}
+.our-recent-works-section #btn_container .btn::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 13px;
+    transition: var(--effect);
+    z-index: -1;   
+}
+.our-recent-works-section #btn_container .btn.active,
+.our-recent-works-section #btn_container .btn.active:hover{
+    color: #000;
+}
+.our-recent-works-section #btn_container .btn.active::after,
+.our-recent-works-section #btn_container .btn.active:hover::after{
+    height: 100%;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.our-recent-works-section .tab-container{
+    padding: 0;
+    margin-top: 40px;
+}
+.our-recent-works-section .tab-container .tab-content{
+    display: none;
+}
+.our-recent-works-section .tab-container .tab-content.current{
+    display: block;
+}
+.our-recent-works-section .tab-container .tab-content .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.our-recent-works-section .tab-container .tab-content .text-block{
+    display: block;
+    color: #fff;
+}
+.our-recent-works-section .tab-container .tab-content .text-block,
+.our-recent-works-section .tab-container .tab-content .img-block{
+    width: 48%;
+}
+.our-recent-works-section .tab-container .tab-content .img-block{
+    line-height: 0;
+}
 
 
 
