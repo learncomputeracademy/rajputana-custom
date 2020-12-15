@@ -11,7 +11,8 @@
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Splide CSS CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">-->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -82,23 +83,18 @@
                         <button class="next-btn"></button>
                     </div>
                     <div class="img-block border">
-                        <div class="splide">
-                            <div class="splide__track">
-                                <ul class="splide__list">
-                                    <li class="splide__slide">
-                                        <img src="images/custom-build-img2.jpg" alt="Custom Build" class="img-fluid" />
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="images/custom-build-img2.jpg" alt="Custom Build" class="img-fluid" />
-                                    </li>
-                                    <li class="splide__slide">
-                                        <img src="images/custom-build-img2.jpg" alt="Custom Build" class="img-fluid" />
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
+                        <div class="slider-items">
+                            <div class="item active">
+                                <img src="images/custom-build-img2.jpg" alt="" class="img-fluid" />
+                            </div> <!-- .item -->
+                            <div class="item">
+                                <img src="images/custom-build-img2.jpg" alt="" class="img-fluid" />
+                            </div> <!-- .item -->
+                            <div class="item">
+                                <img src="images/custom-build-img2.jpg" alt="" class="img-fluid" />
+                            </div> <!-- .item -->
+                        </div> <!-- .slider-items -->
+                    </div> <!-- .img-block -->
                 </div>
             </div>
         </div>
@@ -173,6 +169,8 @@
 
 
     <!-- Splide JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>-->
     <script src="js/app.js"></script>
-</body></html>
+</body>
+
+</html>

@@ -316,8 +316,36 @@ li {
     cursor: pointer;
 }
 
+.custom-build-section .custom-build .row:nth-child(2) .text-block .next-btn:focus {
+    outline: none;
+    border: none;
+}
+
 .custom-build-section .custom-build .row:nth-child(2) .img-block {
     width: 51%;
+    overflow: hidden;
+}
+
+.custom-build-section .custom-build .row:nth-child(2) .img-block .slider-items .item {
+    display: none;
+}
+
+.custom-build-section .custom-build .row:nth-child(2) .img-block .slider-items .item img {
+    animation: zoom .5s linear forwards;
+}
+
+.custom-build-section .custom-build .row:nth-child(2) .img-block .slider-items .item.active {
+    display: block;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 /*Video Section*/
