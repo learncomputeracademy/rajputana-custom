@@ -108,57 +108,57 @@ window.addEventListener("DOMContentLoaded", function () {
     CUSTOM_BUILD_SLIDER();
 
 });
-            const TABS = (tabHolder, tabClass, tabContentClass) => {
-            const container = document.querySelector(tabHolder);
-            const btns = document.querySelectorAll(tabClass);
 
-            //Hide all the Tab Contents
-            let tabcontent = document.querySelectorAll(tabContentClass);
+const TABS = (tabHolder, tabClass, tabContentClass) => {
+const container = document.querySelector(tabHolder);
+const btns = document.querySelectorAll(tabClass);
 
-
-            // Display : Block / None according to Tab Data-Attribute
-            btns.forEach((item) => {
-                item.addEventListener("click", () => {
-
-                    let attr = item.getAttribute("data-tab");
-
-                    tabcontent.forEach(item => {
-                        if (item.id === attr) {
-
-                            item.style.display = "block";
-                            item.classList.add("current");
-
-                        } else {
-                            item.style.display = "none";
-                            item.classList.remove("current");
-                        }
-                    })
-
-                })
-            })
-
-            //Tab Buttons Active/Deactive Class Add/Remove
-            btns.forEach((i) => {
-                i.addEventListener("click", () => {
-
-                    btns.forEach(j => j.classList.remove("active"))
-
-                    i.classList.add("active");
-
-                });
-            });
-        }
-
-        // Call the function
-        TABS("#btn_container", ".btn", ".tab-content");
+//Hide all the Tab Contents
+let tabcontent = document.querySelectorAll(tabContentClass);
 
 
+// Display : Block / None according to Tab Data-Attribute
+btns.forEach((item) => {
+    item.addEventListener("click", () => {
 
+        let attr = item.getAttribute("data-tab");
+
+        tabcontent.forEach(item => {
+            if (item.id === attr) {
+
+                item.style.display = "block";
+                item.classList.add("current");
+
+            } else {
+                item.style.display = "none";
+                item.classList.remove("current");
+            }
+        })
+
+    })
+})
+
+//Tab Buttons Active/Deactive Class Add/Remove
+btns.forEach((i) => {
+    i.addEventListener("click", () => {
+
+        btns.forEach(j => j.classList.remove("active"))
+
+        i.classList.add("active");
+
+    });
+});
+}
+
+// Call the function
+TABS("#btn_container", ".btn", ".tab-content");
 
 
 
-//Splide Slider
-//new Splide('.splide', {
-//    type: 'fade',
-//    rewind: true,
-//}).mount();
+
+
+//Blog Slider
+new Splide( '.splide', {
+    perPage: 3,
+    rewind : true,
+} ).mount();

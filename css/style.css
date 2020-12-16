@@ -1,3 +1,5 @@
+@import '../fonts/dinpro-font.css';
+
 /*
 Project: Rajputana Customs
 */
@@ -8,14 +10,16 @@ Project: Rajputana Customs
     margin: 0;
     box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 :root {
     --accent-color: #F5931C;
     --text-color: #fff;
     --off-white: #fefefe;
 
     --title-font: 'Oswald', sans-serif;
-    --primary-font: ;
+    --primary-font: 'DIN Pro Cond';
 
     --effect: all .3s ease-in-out;
     --z: 999;
@@ -39,6 +43,31 @@ Project: Rajputana Customs
     background-color: var(--accent-color);
     padding: 15px 62px;
     margin: 0;
+    transition: var(--effect);
+}
+
+.btn:hover {
+    background-color: rgb(29, 32, 51);
+    color: var(--accent-color);
+}
+.btn-small {
+    font-size: 20px;
+    font-family: var(--title-font);
+    color: rgb(29, 32, 51);
+    line-height: 1.3;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: var(--accent-color);
+    padding: 13px 37px;
+    margin: 0;
+    transition: var(--effect);
+}
+
+.btn-small:hover {
+    background-color: rgb(29, 32, 51);
+    color: var(--accent-color);
 }
 
 .border {
@@ -443,7 +472,52 @@ li {
         opacity: 0;
     }
 }
+/*Modal*/
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
 
+.modal .modal-container {
+    width: 50%;
+    background-color: #1f2e45;
+    padding: 5px;
+    margin: 0;
+    text-align: right;
+    position: relative;
+}
+
+.modal .modal-container.zoomIn {
+    animation: zoomIn 2s linear forwards 1s;
+}
+
+.modal .modal-container #close {
+    border: none;
+    font-size: 35px;
+    color: var(--text-color);
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    top: -5%;
+    right: -2%;
+    width: 40px;
+    height: 40px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    line-height: 31px;
+}
+
+.modal .modal-container .modal-body iframe {
+    width: 100%;
+    height: 320px;
+}
 /* Our Service Section */
 .our-service-section {
     background-image: url(../images/our-service-bg.jpg);
@@ -451,7 +525,7 @@ li {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    padding: 90px 0;
+    padding: 90px 0 195px 0;
     margin: 0;
 }
 
@@ -529,7 +603,6 @@ li {
     font-size: 17px;
     font-family: var(--primary-font);
     color: var(--off-white);
-    text-transform: uppercase;
     line-height: 1.8;
     font-weight: 300;
     padding: 0 0 34px 0;
@@ -546,8 +619,68 @@ li {
     padding: 0;
     margin: 0;
 }
+/*Professional Approach Section Start*/
+.professional-approach-section{
+    background-image: url('../images/professional-approach-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 0;
+    margin: 0;   
+    min-height: 754px; 
+    position: relative;
+    border-bottom: 4px solid #f5931c;
+}
+.professional-approach-section .text-block{
+    background-image: url('../images/professional-approach-text-block-bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: left top;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    border-bottom: none!important;
+    background-color: #101010;
+    padding: 80px 300px 70px 30px;
+    margin: 0;
+}
+.professional-approach-section .text-block h3{
+    font-size: 26px;
+    font-family: var(--title-font);
+    color: var(--accent-color);
+    text-transform: uppercase;
+    line-height: 1.3;
+    font-weight: 500;
+    padding: 0 0 29px 0;
+    margin: 0;
+}
+.professional-approach-section .text-block h2{
+    font-size: 42px;
+    font-family: var(--title-font);
+    color: var(--text-color);
+    line-height: 1.3;
+    font-weight: 500;
+    padding: 0 0 33px 0;
+    margin: 0;
+}
+.professional-approach-section .text-block p{
+    font-family: 'DIN Pro';
+    font-size: 18px;
+    color: var(--off-white);
+    opacity: .6;
+    line-height: 1.667;
+    font-weight: 400;
+    padding: 0 0 38px 0;
+    margin: 0;
+}
+.professional-approach-section .text-block a{
+    margin-top: 55px;
+}
 
-/**/
+
+/*Our Recent Works Start*/
 .our-recent-works-section{
     background-image: url('../images/our-recent-works-bg.jpg');
     background-attachment: fixed;
@@ -594,6 +727,7 @@ li {
     position: relative;
     transition: var(--effect);
     z-index: 2; 
+    cursor: pointer;
 }
 .our-recent-works-section #btn_container .btn:focus{
     outline: none;
@@ -639,6 +773,26 @@ li {
     display: block;
     color: #fff;
 }
+.our-recent-works-section .tab-container .tab-content .text-block h3{
+    font-family: var(--primary-font);
+    font-size: 37px;
+    color: var(--text-color);
+    line-height: 1.3;
+    font-weight: 500;
+    padding: 0 0 27px 0;
+    margin: 0;
+}
+.our-recent-works-section .tab-container .tab-content .text-block p{
+  font-size: 19px;
+  font-family: var(--primary-font);
+  color: rgb(255, 255, 255);
+  line-height: 1.684;
+  font-weight: 400;
+  opacity: .6;
+  padding: 0 0 32px 0;
+  margin: 0;
+}
+
 .our-recent-works-section .tab-container .tab-content .text-block,
 .our-recent-works-section .tab-container .tab-content .img-block{
     width: 48%;
@@ -647,65 +801,135 @@ li {
     line-height: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*Modal*/
-.modal {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .8);
-    display: none;
-    justify-content: center;
-    align-items: center;
+/* Our Blog Section */
+.our-blog-section{
+    background-image: url('../images/our-blog-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 90px 0;
+    margin: 0; 
+}
+.our-blog-section .card{
+    margin: 0 33px;
+}
+.our-blog-section .card .card-body{
+    padding: 18px 0 0 0;
 }
 
-.modal .modal-container {
-    width: 50%;
-    background-color: #1f2e45;
-    padding: 5px;
+.our-blog-section .card .card-body h3{
+    font-family: var(--title-font);
+    font-size: 24px;
+    color: var(--accent-color);
+    line-height: 1.542;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 0 13px 0;
     margin: 0;
-    text-align: right;
+}
+.our-blog-section .card .card-body p{
+    font-family: var(--primary-font);
+    font-size: 17px;
+    color: var(--off-white);
+    line-height: 1.3;
+    font-weight: 400;
+    padding: 0 0 13px 0;
+    margin: 0;
+}
+
+.our-blog-section .splide .splide__pagination {
+    display: none;
+}
+
+/*Contact Section*/
+.contact-section{
     position: relative;
+    padding: 0;
+    margin: 0;
 }
-
-.modal .modal-container.zoomIn {
-    animation: zoomIn 2s linear forwards 1s;
+.contact-section .map-block{
+    line-height: 0;
+    margin: 0;
+    padding: 0;
 }
-
-.modal .modal-container #close {
-    border: none;
-    font-size: 35px;
-    color: var(--text-color);
-    background-color: transparent;
-    cursor: pointer;
-    position: absolute;
-    top: -5%;
-    right: -2%;
-    width: 40px;
-    height: 40px;
-    background: var(--accent-color);
-    border-radius: 50%;
-    line-height: 31px;
-}
-
-.modal .modal-container .modal-body iframe {
+.contact-section .map-block iframe{
     width: 100%;
-    height: 320px;
+    height: 770px;
 }
+.contact-section .form-block{
+    position: absolute;
+    right: 0; 
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    padding: 67px 300px 67px 64px;
+    margin: 0;
+}
+.contact-section .form-block form{
+    background-color: var(--text-color);
+    padding: 36px;
+    margin: 0;
+}
+.contact-section .form-block form h2{
+    font-family: var(--title-block);
+    font-size: 44px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    line-height: 1.3; 
+    padding: 0 0 28px 0;
+    margin: 0; 
+}
+.contact-section .form-block form .input-group{
+    margin-bottom: 25px;
+}
+.contact-section .form-block form .input-group .form-control{
+    width: 100%;
+    border: 1px solid rgba(0,0,0,.2);
+    padding: 18px 23px;
+    background-color: var(--text-color);
+}
+.contact-section .form-block form .input-group textarea.form-control{
+    height: 140px;
+}
+.contact-section .form-block form .input-group .form-control::placeholder,
+.contact-section .form-block form .input-group textarea.form-control::placeholder{
+  font-family: 'DIN Pro';
+  font-size: 18px;
+  color: rgba(55, 55, 55, 0.8);
+  line-height: 1.3;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+}
+.contact-section .form-block form .btn-group .btn-submit{
+    font-family: var(--title-font);
+    font-size: 20px;
+    color: rgb(29, 32, 51);
+    line-height: 1.3;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--accent-color);
+    border: none;
+    padding: 13px 45px;
+    margin: 0;
+    transition: var(--effect);
+}
+.contact-section .form-block form .btn-group .btn-submit:hover{
+    background-color: rgb(29, 32, 51);
+    color: var(--accent-color);
+}
+
+
+
+
+
+
+
+
 
 
 /**/
