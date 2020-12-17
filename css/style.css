@@ -869,6 +869,10 @@ li {
     height: 770px;
 }
 .contact-section .form-block{
+    background: url(../images/form-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
     position: absolute;
     right: 0; 
     top: 0;
@@ -896,6 +900,10 @@ li {
     margin-bottom: 25px;
 }
 .contact-section .form-block form .input-group .form-control{
+    font-family: 'DIN Pro';
+    font-size: 18px;
+    color: #000;
+    line-height: 1.3; 
     width: 100%;
     border: 1px solid rgba(0,0,0,.2);
     padding: 18px 23px;
@@ -904,6 +912,13 @@ li {
 .contact-section .form-block form .input-group textarea.form-control{
     height: 140px;
 }
+.contact-section .form-block form .input-group .form-control:focus{
+    border: 1px solid var(--accent-color);
+    outline: none;
+}
+/*.contact-section .form-block form .input-group .form-control:required{
+    border: 1px solid rgba(0,0,0,.4);
+}*/
 .contact-section .form-block form .input-group .form-control::placeholder,
 .contact-section .form-block form .input-group textarea.form-control::placeholder{
   font-family: 'DIN Pro';
