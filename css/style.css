@@ -1,4 +1,5 @@
 @import '../fonts/dinpro-font.css';
+@import 'hamburger.css';
 
 /*
 Project: Rajputana Customs
@@ -245,7 +246,9 @@ li {
     margin: 0;
     position: relative;
 }
-
+.banner header .rt-block #menuToggle{
+    display: none;
+}
 
 .banner header .rt-block .nav-bar ul li a.active::after {
     content: '';
@@ -288,6 +291,43 @@ li {
 
 .banner .desc h1 span {
     display: block;
+}
+
+.mobile-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    background-color: var(--accent-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transform: translateX(-400px);
+    transition: var(--effect);
+}
+.mobile-menu .mobile-nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mobile-menu .mobile-nav ul li{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.mobile-menu .mobile-nav ul li a{
+    font-family: var(--title-font);
+    font-size: 23px;
+    color: var(--text-color);
+    line-height: 1.3;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
 }
 
 /*Custom Build Section*/
@@ -1151,4 +1191,12 @@ footer .footer-bottom p a{
 }
 
 
-/**/
+/* Media Query */
+@media only screen and (max-width: 1100px) {
+    .banner header .rt-block .nav-bar {
+        display: none;
+    }
+    .banner header .rt-block #menuToggle{
+        display: block;
+    }  
+}

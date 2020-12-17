@@ -166,3 +166,21 @@ new Splide( '.splide', {
     perPage: 3,
     rewind : true,
 } ).mount();
+
+
+//Mobile Menu
+const mobileSlideMenu = document.getElementById("mobile-slide-menu");
+const menuToggler = document.getElementById("menuToggle");
+
+menuToggler.addEventListener("click", mobileSlide);
+
+function mobileSlide(){
+    mobileSlideMenu.style.transform = 'translateX(0px)';
+    menuToggler.classList.toggle("close");
+    
+    if(!menuToggle.classList.contains("close")){
+        mobileSlideMenu.style.transform = 'translateX(-400px)';
+    }
+
+}
+
