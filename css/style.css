@@ -948,7 +948,8 @@ footer .row{
 }
 
 footer .row .block{
-    border: 1px solid #fff;
+    padding: 0;
+    margin: 0;
 }
 footer .row .block h3{
   font-family: var(--title-font);
@@ -1032,18 +1033,43 @@ footer .row .col-6 .block .payment-icons ul{
 
 footer .row .col-6 .block .payment-icons ul li{
     margin: 0 15px 0 0;
+    transition: var(--effect);
 }
-
+footer .row .col-6 .block .payment-icons ul li:hover{
+    opacity: .5;
+}
 footer .row .col-6 .block .footer-logo{
     padding: 27px 0 0 0; 
     opacity: .4;
 }
 
+footer .footer-bottom{
+    border-top: 1px solid rgba(255,255,255,.2); 
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
 
+footer .footer-bottom p{
+    font-family: 'DIN Pro';
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.3;
+    font-weight: 400;
+    opacity: .5;
+    padding: 0;
+    margin: 0;
+}
 
-
-
-
+footer .footer-bottom p a{
+    font-family: 'DIN Pro';
+    font-size: 16px;
+    color: var(--accent-color);
+    line-height: 1.3;
+    font-weight: 500;
+    padding: 0;
+    margin: 0;    
+}
 
 
 /**/
