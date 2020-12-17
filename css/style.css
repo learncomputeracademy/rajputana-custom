@@ -112,8 +112,6 @@ li {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0;
-    border-right: 1px dotted red;
-    border-left: 1px dotted red;
 }
 
 /*Banner Start*/
@@ -121,7 +119,41 @@ li {
     position: relative;
     line-height: 0;
 }
-
+.banner .banner__splide .splide__pagination {
+    display: none;
+}
+.banner .banner__splide .splide__arrows .splide__arrow--prev {
+    left: 22em;
+    width: 34px;
+    height: 34px;
+    background-color: var(--accent-color);
+    background-image: url('../images/left-arrow-blog.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: var(--effect);
+}
+.banner .banner__splide .splide__arrow--next {
+    right: 22em;
+    width: 34px;
+    height: 34px;
+    background-color: var(--accent-color);
+    background-image: url('../images/right-arrow-blog.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: var(--effect);
+}
+.banner .banner__splide .splide__arrows .splide__arrow--prev:hover{
+    left: 21em;
+}
+.banner .banner__splide .splide__arrows .splide__arrow--next:hover{
+    right: 21em;
+}
+.banner .banner__splide .splide__arrow--prev svg,
+.banner .banner__splide .splide__arrow--next svg{
+    display: none;
+}
 .banner header {
     position: absolute;
     left: 0;
@@ -850,6 +882,38 @@ li {
 }
 
 .our-blog-section .splide .splide__pagination {
+    display: none;
+}
+.our-blog-section .splide .splide__arrows .splide__arrow--prev {
+    left: -1em;
+    width: 34px;
+    height: 34px;
+    background-color: var(--accent-color);
+    background-image: url('../images/left-arrow-blog.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: var(--effect);
+}
+.our-blog-section .splide .splide__arrow--next {
+    right: -1em;
+    width: 34px;
+    height: 34px;
+    background-color: var(--accent-color);
+    background-image: url('../images/right-arrow-blog.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: var(--effect);
+}
+.our-blog-section .splide .splide__arrows .splide__arrow--prev:hover{
+    left: -2em;
+}
+.our-blog-section .splide .splide__arrows .splide__arrow--next:hover{
+    right: -2em;
+}
+.our-blog-section .splide .splide__arrow--prev svg,
+.our-blog-section .splide .splide__arrow--next svg{
     display: none;
 }
 

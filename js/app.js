@@ -155,7 +155,11 @@ TABS("#btn_container", ".btn", ".tab-content");
 
 
 
-
+//Banner Slide
+new Splide( '.banner__splide', {
+    type  : 'fade',
+    rewind: true,
+} ).mount();
 
 //Blog Slider
 new Splide( '.splide', {
