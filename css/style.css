@@ -1035,6 +1035,7 @@ footer .row .col-6 .block .payment-icons ul li{
 }
 
 footer .row .col-6 .block .footer-logo{
+    padding: 27px 0 0 0; 
     opacity: .4;
 }
 
