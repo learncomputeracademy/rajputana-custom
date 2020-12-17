@@ -1,3 +1,7 @@
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    preloader.style.display = 'none';
+});
 //Custom Build Section Slider
 window.addEventListener("DOMContentLoaded", function () {
     'use strict';
@@ -177,7 +181,7 @@ menuToggler.addEventListener("click", mobileSlide);
 function mobileSlide(){
     mobileSlideMenu.style.transform = 'translateX(0px)';
     menuToggler.classList.toggle("close");
-    
+
     if(!menuToggle.classList.contains("close")){
         mobileSlideMenu.style.transform = 'translateX(-400px)';
     }
