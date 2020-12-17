@@ -72,13 +72,16 @@ window.addEventListener("DOMContentLoaded", function () {
         function openModal() {
             //Modal Display flex
             const styles = {
-                display: 'flex'
+                visibility : 'visible',
+                opacity : '1',
+                pointerEvents : "auto"
             }
             Object.assign(modal.style, styles);
-            //modal.classList.add("zoomIn");
+
 
             //Set iframe src
             iframe.setAttribute("src", iframeSrc);
+            modalContainer.classList.add("modalSlide");
 
 
 
@@ -89,9 +92,12 @@ window.addEventListener("DOMContentLoaded", function () {
             if (e.target == modal || e.target == close) {
                 //Modal display none
                 const styles = {
-                    display: 'none',
+                    visibility : 'hidden',
+                    opacity : '0',
+                    pointerEvents : 'none'
                 }
                 Object.assign(modal.style, styles);
+                modalContainer.classList.remove("modalSlide");
 
                 //Remove iframe src to null
                 let iframe = document.querySelector("#rajputanaVideo");
