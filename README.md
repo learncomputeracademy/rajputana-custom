@@ -1,2 +1,2 @@
-# rajputana-custom
+# Rajputana Custom
  URL: https://learncomputeracademy.github.io/rajputana-custom/
